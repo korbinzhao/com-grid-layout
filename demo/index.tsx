@@ -11,24 +11,31 @@ const App = () => {
   const generateDOM = () => {
 
     const layout = [{
-      static: true
+      static: true,
+      id: 111,
     }, {
-      static: false
+      static: false,
+      id: 222
     }, {
-      static: true
+      static: true,
+      id: 333
     }, {
-      static: false
+      static: false,
+      id: 444
     }, {
-      static: true
+      static: true,
+      id: 555
     }, {
-      static: true
+      static: true,
+      id: 666
     }, {
-      static: true
+      static: true,
+      id: 777
     }];
 
     return _.map(layout, function(l, i) {
       return (
-        <div key={i} className={l.static ? "static" : ""}>
+        <div key={i} className={l.static ? "static" : ""} data-id={l.id} >
           {l.static ? (
             <span
               className="text"
@@ -48,6 +55,9 @@ const App = () => {
     <div>
       <GridLayout
         width={1000}
+        onLayoutChange={(layout)=> {
+          console.log('--- onLayoutChange ---', layout);
+        }}
       >
         {generateDOM()}
       </GridLayout>

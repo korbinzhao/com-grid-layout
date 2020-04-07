@@ -43,6 +43,7 @@ export function cloneLayoutItem(layoutItem) {
     x: layoutItem.x,
     y: layoutItem.y,
     i: layoutItem.i,
+    id: layoutItem.id,
     minW: layoutItem.minW,
     maxW: layoutItem.maxW,
     minH: layoutItem.minH,
@@ -593,13 +594,14 @@ export function synchronizeLayoutWithChildren(
         );
       }
       const g = child.props["data-grid"] || child.props._grid;
+      const id = child.props["data-id"];
 
       // Hey, this item has a data-grid property, use it.
       if (g) {
         if (!isProduction) {
           validateLayout([g], "ReactGridLayout.children");
         }
-        layout[i] = cloneLayoutItem({ ...g, i: child.key });
+        layout[i] = cloneLayoutItem({ ...g, i: child.key, id });
       } else {
         // Nothing provided: ensure this is added to the bottom
         layout[i] = cloneLayoutItem({
@@ -607,7 +609,8 @@ export function synchronizeLayoutWithChildren(
           h: 1,
           x: 0,
           y: bottom(layout),
-          i: String(child.key)
+          i: String(child.key),
+          id
         });
       }
     }
