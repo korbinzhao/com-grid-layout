@@ -1,4 +1,3 @@
-// @flow
 import React from "react";
 import PropTypes from "prop-types";
 import isEqual from "lodash.isequal";
@@ -46,7 +45,7 @@ interface Props{
   breakpoints?: any,
   cols?: { [key: string]: number },
   layouts?: any,
-  width?: number,
+  width: number,
   margin?: { [key: string]: [number, number] } | [number, number],
   containerPadding?: { [key: string]: [number, number] } | [number, number],
 

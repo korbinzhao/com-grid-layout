@@ -55,7 +55,7 @@ const App = () => {
   return (
     <div>
       <GridLayout
-        width={1000}
+        width={1300}
         onLayoutChange={(layout)=> {
           console.log('--- onLayoutChange ---', layout);
         }}
