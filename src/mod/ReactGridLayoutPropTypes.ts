@@ -6,10 +6,10 @@ import {
 } from "react";
 
 export interface Props {
-  className: string,
-  style: Object,
-  width: number,
-  autoSize: boolean,
+  className?: string,
+  style?: Object,
+  width?: number,
+  autoSize?: boolean,
   cols: number,
   draggableCancel: string,
   draggableHandle: string,

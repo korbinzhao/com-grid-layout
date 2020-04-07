@@ -74,7 +74,8 @@ export function childrenEqual(a, b): boolean {
  * function in conjunction with preval to generate the fastest possible comparison
  * function, tuned for exactly our props.
  */
-export const fastRGLPropsEqual = require("./fastRGLPropsEqual");
+import _fastRGLPropsEqual from "./fastRGLPropsEqual"
+export const fastRGLPropsEqual = _fastRGLPropsEqual ;
 
 // Like the above, but a lot simpler.
 export function fastPositionEqual(a, b) {

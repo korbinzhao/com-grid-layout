@@ -16,6 +16,8 @@ import {
 } from "./responsiveUtils";
 import ReactGridLayout from "./ReactGridLayout";
 
+import './index.less';
+
 const type = obj => Object.prototype.toString.call(obj);
 
 /**
@@ -43,20 +45,20 @@ interface State {
 interface Props{
   // Responsive config
   breakpoint?: any,
-  breakpoints: any,
-  cols: { [key: string]: number },
-  layouts: any,
-  width: number,
-  margin: { [key: string]: [number, number] } | [number, number],
-  containerPadding: { [key: string]: [number, number] } | [number, number],
+  breakpoints?: any,
+  cols?: { [key: string]: number },
+  layouts?: any,
+  width?: number,
+  margin?: { [key: string]: [number, number] } | [number, number],
+  containerPadding?: { [key: string]: [number, number] } | [number, number],
 
-  verticalCompact: boolean,
-  compactType: any,
+  verticalCompact?: boolean,
+  compactType?: any,
 
   // Callbacks
-  onBreakpointChange: (Breakpoint, cols: number) => void,
-  onLayoutChange: (arg1, arg2) => void,
-  onWidthChange: (
+  onBreakpointChange?: (Breakpoint, cols: number) => void,
+  onLayoutChange?: (arg1, arg2) => void,
+  onWidthChange?: (
     containerWidth: number,
     margin: [number, number],
     cols: number,
