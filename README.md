@@ -1,5 +1,5 @@
-# react-webpack4-typescript-component-quickstart
-a quick start for a component based on react & webpack4 & typescript
+# com-grid-layout
+a grid layout component based on react
 
 # development
 ```
