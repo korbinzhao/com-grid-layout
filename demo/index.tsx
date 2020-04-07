@@ -1,12 +1,13 @@
 import React, { Component } from "react";
 import ReactDOM from "react-dom";
 import GridLayout from '../src/index';
-import _ from "lodash";
 // import MyComponent from '../lib/index';
+import _ from "lodash";
+
+import './index.less';
 
 
 const App = () => {
-
 
   const generateDOM = () => {
 

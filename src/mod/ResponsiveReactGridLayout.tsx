@@ -1,5 +1,5 @@
 // @flow
-import * as React from "react";
+import React from "react";
 import PropTypes from "prop-types";
 import isEqual from "lodash.isequal";
 
@@ -15,8 +15,6 @@ import {
   findOrGenerateResponsiveLayout,
 } from "./responsiveUtils";
 import ReactGridLayout from "./ReactGridLayout";
-
-import './index.less';
 
 const type = obj => Object.prototype.toString.call(obj);
 

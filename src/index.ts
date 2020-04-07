@@ -1,3 +1,3 @@
-import App from "./mod/ResponsiveReactGridLayout";
+import App from "./grid-layout";
 
 export default App;
